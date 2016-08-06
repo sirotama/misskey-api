@@ -21,7 +21,7 @@ Misskey API is written in TypeScript.
 ## How to build
 Ensure that you have [node-gyp](https://github.com/nodejs/node-gyp#installation) installed.
 
-1. `git clone git://github.com/MissKernel/Misskey-API.git`
+1. `git clone git://github.com/sagume/Misskey-API.git`
 2. `cd Misskey-API`
 3. `npm install`
 4. `npm run dts`
@@ -38,9 +38,9 @@ The MIT License. See [LICENSE](LICENSE).
 
 [mit]:             http://opensource.org/licenses/MIT
 [mit-badge]:       https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square
-[travis-link]:     https://travis-ci.org/MissKernel/Misskey-API
-[travis-badge]:    http://img.shields.io/travis/MissKernel/Misskey-API.svg?style=flat-square
-[david-link]:      https://david-dm.org/MissKernel/Misskey-API
-[david-badge]:     https://img.shields.io/david/MissKernel/Misskey-API.svg?style=flat-square
-[david-dev-link]:  https://david-dm.org/MissKernel/Misskey-API#info=devDependencies&view=table
-[david-dev-badge]: https://img.shields.io/david/dev/MissKernel/Misskey-API.svg?style=flat-square
+[travis-link]:     https://travis-ci.org/sagume/Misskey-API
+[travis-badge]:    http://img.shields.io/travis/sagume/Misskey-API.svg?style=flat-square
+[david-link]:      https://david-dm.org/sagume/Misskey-API
+[david-badge]:     https://img.shields.io/david/sagume/Misskey-API.svg?style=flat-square
+[david-dev-link]:  https://david-dm.org/sagume/Misskey-API#info=devDependencies&view=table
+[david-dev-badge]: https://img.shields.io/david/dev/sagume/Misskey-API.svg?style=flat-square

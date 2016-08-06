@@ -6,13 +6,13 @@ export default function(text: string): Promise<IUser[]> {
 		return Promise.resolve(null);
 	}
 
-	var mentions = text.match(/@[a-zA-Z0-9\-]+/g);
+	let mentions = text.match(/@[a-zA-Z0-9\-]+/g);
 
 	// 重複チェック
 	// http://qiita.com/cocottejs/items/7afe6d5f27ee7c36c61f
 	if (mentions !== null) {
-		mentions = mentions.filter(function (x, i, self) {
-				return self.indexOf(x) === i;
+		mentions = mentions.filter((search: string, count: number, self: any) => {
+				return self.indexOf(search) === count;
 			}
 		);
 	}

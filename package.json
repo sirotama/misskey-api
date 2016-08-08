@@ -4,7 +4,7 @@
   "description": "Misskey API",
   "main": "./built/main.js",
   "repository": {
-    "url": "https://github.com/MissKernel/Misskey-API.git"
+    "url": "https://github.com/sagume/Misskey-API.git"
   },
   "scripts": {
     "start": "node ./built/main.js",

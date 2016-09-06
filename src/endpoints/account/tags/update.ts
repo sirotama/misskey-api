@@ -9,10 +9,14 @@ import {IUser} from '../../../db/interfaces';
 export default function(user: IUser, tags: string): Promise<Object> {
 	tags = tags.trim();
 
-	const tagEntities: string[] = tags.split(' ');
+	let tagEntities: string[] = [];
 
-	if (tagEntities.length > 30) {
-		return <Promise<any>>Promise.reject('too-many-tags');
+	if ( tags !== '' ) {
+		tagEntities = tags.split(' ');
+
+		if (tagEntities.length > 30) {
+			return <Promise<any>>Promise.reject('too-many-tags');
+		}
 	}
 
 	return new Promise<Object>((resolve, reject) => {

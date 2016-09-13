@@ -5,18 +5,6 @@ install:
   - "npm install --only=dev"
 before_script:
   - "npm run dts"
-after_success:
-  - openssl aes-256-cbc -K $encrypted_2450bf0826ae_key -iv $encrypted_2450bf0826ae_iv -in .travis_rsa.enc -out .travis_rsa.dec -d
-  - cp .travis_rsa ~/.ssh/id_rsa
-  - chmod 600 ~/.ssh/id_rsa
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - git checkout -b release
-  - rm -rf ./src/ .travis.yml .travis_rsa.enc dtsm.json gulpfile.ts tsconfig.json tslint.json
-  - git add -f ./built
-  - git config --global user.email "otofune@gmail.com"
-  - git config --global user.name "otofune"
-  - git commit -am "Release build for $TRAVIS_COMMIT"
-  - if [ $TRAVIS_BRANCH = "master" ]; then git push -f git@github.com:sagume/Misskey-API release; fi
 env:
   - CXX=g++-4.8
 addons:

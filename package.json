@@ -27,7 +27,6 @@
     "@types/ratelimiter": "2.1.28",
     "@types/redis": "0.12.34",
     "@types/request": "0.0.39",
-    "@types/shelljs": "0.3.33",
     "gulp": "3.9.1",
     "gulp-tslint": "7.0.1",
     "gulp-typescript": "3.1.4",

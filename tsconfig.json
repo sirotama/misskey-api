@@ -16,7 +16,6 @@
 	"compileOnSave": false,
 	"files": [
 		"./node_modules/typescript/lib/lib.es6.d.ts",
-		"./typings/bundle.d.ts",
 		"./src/api-handler.ts",
 		"./src/authenticate.ts",
 		"./src/check-dependencies.ts",

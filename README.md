@@ -20,8 +20,7 @@ Ensure that you have [node-gyp](https://github.com/nodejs/node-gyp#installation)
 1. `git clone git://github.com/misskey-delta/Misskey-API.git`
 2. `cd Misskey-API`
 3. `npm install`
-4. `npm run dts`
-5. `npm run build`
+4. `npm run build`
 
 ## How to run tests
 `npm run test`

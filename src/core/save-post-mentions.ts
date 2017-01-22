@@ -18,5 +18,5 @@ export default function(author: IUser, post: IPost, text: string): void {
 				});
 			});
 		});
-	});
+	}, reason => {});
 }

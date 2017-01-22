@@ -8,18 +8,15 @@ export default function(text: string): Promise<IUser[]> {
 
 	let mentions = text.match(/@[a-zA-Z0-9\-]+/g);
 
-	// 重複チェック
-	// http://qiita.com/cocottejs/items/7afe6d5f27ee7c36c61f
-	if (mentions !== null) {
-		mentions = mentions.filter((search: string, count: number, self: any) => {
-				return self.indexOf(search) === count;
-			}
-		);
-	}
-
 	if (mentions === null) {
 		return Promise.reject('text-is-no-include-mentions');
 	}
+
+	// check duplicate
+	// http://qiita.com/cocottejs/items/7afe6d5f27ee7c36c61f
+	mentions = mentions.filter((search: string, count: number, self: any) => {
+		return self.indexOf(search) === count;
+	});
 
 	return Promise.all(mentions.map(mention => new Promise<IUser>((resolve, reject) => {
 		const sn = mention.replace('@', '');

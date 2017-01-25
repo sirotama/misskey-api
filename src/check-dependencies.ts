@@ -14,12 +14,12 @@ function checkDependency(serviceName: string, command: string, transform: (x: st
 		const x = execSync(command, { stdio: ['pipe', 'pipe', 'ignore'] });
 		const ver = transform(x.toString());
 		if (ver !== null) {
-			logInfo(`${serviceName} ${transform(stdout.toString())}`);
+			logInfo(`${serviceName} ${ver}`);
 		} else {
 			logWarn(`Check dependencies error (${serviceName})`);
 			logWarn(`Regexp used for version check of ${serviceName} is probably messed up`);
 		}
 	} catch (e) {
-		logWarn(`Check dependencies error (${serviceName})`);
+		logWarn(`Unable to find (${serviceName})`);
 	}
 }

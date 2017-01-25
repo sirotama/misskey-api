@@ -13,7 +13,7 @@ function checkDependency(serviceName: string, command: string, transform: (x: st
 	try {
 		const x = execSync(command, { stdio: ['pipe', 'pipe', 'ignore'] });
 		const ver = transform(x.toString());
-		if (ver != null) {
+		if (ver !== null) {
 			logInfo(`${serviceName} ${transform(stdout.toString())}`);
 		} else {
 			logWarn(`Check dependencies error (${serviceName})`);

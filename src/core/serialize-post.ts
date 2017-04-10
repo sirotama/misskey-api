@@ -9,7 +9,7 @@ export default function serializePost(
 	const postObj = post.toObject();
 
 	return new Promise<Object>((resolve, reject) => {
-		// 作者
+		// 投稿ユーザー
 		User.findById(post.user, (findUserErr: any, user: IUser) => {
 			if (findUserErr !== null) {
 				return reject(findUserErr);

@@ -17,7 +17,8 @@ export default function(endpoint: any, req: any, res: any): void {
 	logInfo(`Request: ${req.method} ${req.path}`);
 
 	function reply(data: any): any {
-		return res(data).header('Access-Control-Allow-Origin', '*');
+		logInfo(JSON.stringify(data));
+		return res(data).header('Access-Control-Allow-Origin', '*', "Content-Type", "application/json");
 	}
 
 	authenticate(req).then((context: any) => {

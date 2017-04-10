@@ -1,5 +1,6 @@
 import {IApplication, IUser} from '../../db/interfaces';
 import create from '../../endpoints/posts/create';
+import {logInfo} from 'log-cool';
 
 export default function(
 	app: IApplication,
@@ -13,8 +14,9 @@ export default function(
 		req.payload['text'],
 		req.payload['files']
 	).then(post => {
-		res(post);
+		res({'result': true, post});
 	}, (err: any) => {
-		res({error: err}).code(500);
+		logInfo(JSON.stringify({'result': false, error: err}));
+		res({'result': false, error:err}).code(400);
 	});
 }
